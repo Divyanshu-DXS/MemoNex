@@ -12,6 +12,7 @@
     color: #fff;
     padding-top: 4%;
     padding-left: 10%;
+    padding-right: 10%;
     padding-bottom: 4%;
 
 }
@@ -20,9 +21,13 @@
     align-items: center;
     font-size: 35px;
     font-weight: 600;
+
 }
 .container h1 img{
     height: 55px;
+}
+.toggle-switch-container {
+    margin-left: auto; /* Push toggle switch to the right end */
 }
 .container button img{
     width: 25px;
@@ -63,3 +68,52 @@
     width: 22px;
     cursor: pointer;
 }
+/* Hide default checkbox */
+.toggle-switch input {
+    display: none;
+  }
+  
+  /* Style toggle switch container */
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px; /* Set maximum width */
+    height: 20px; /* Set maximum height */
+  }
+  
+  /* Style toggle switch slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 20px; /* Set border radius to half of the maximum height */
+  }
+  
+  /* Style toggle switch slider when toggled */
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px; /* Adjust height to fit within the container */
+    width: 16px; /* Adjust width to fit within the container */
+    left: 2px; /* Adjust positioning to fit within the container */
+    bottom: 2px; /* Adjust positioning to fit within the container */
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  /* Style toggle switch when checked */
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  /* Style toggle switch slider when checked */
+  input:checked + .slider:before {
+    transform: translateX(40px); /* Adjust position to fit within the container */
+  }
+  
